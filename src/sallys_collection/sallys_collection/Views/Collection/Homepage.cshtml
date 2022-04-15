@@ -1,1 +1,61 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Homepage";
+}
+
+
+
+                <div id="shopify-section-1523632221771" class="shopify-section section section_homepage section_featured-products">
+
+
+
+                    <div class="container with_bg" style="background-color: #ffffff;">
+
+                        <h2 class="section_heading">popular items</h2>
+
+                        <div class="row product_listing__main">
+
+            @for(var i = 0; i < 4; i++)
+            {
+                <div class="col-sm-3 item_4_1 item_2_1">
+
+                                <div class="product_item">
+                                    <div class="product_img">
+                                        <a class="img_change" href="#">
+                                            <img class="img__1" src="~/assets/images/classic_fit_three-piece_check_suit_1_270x341_crop_top.jpg" alt="Classic Fit Three-Piece Check Suit">
+
+                                            <img class="img__2" src="~/assets/images/classic_fit_three-piece_check_suit_2_270x341_crop_top.jpg" alt="Classic Fit Three-Piece Check Suit">
+
+                                        </a>
+                                    </div>
+
+                                    <div class="product_info">
+                                        <p class="product_name">
+
+                                            <a href="#">Classic Fit Three-Piece Check Suit</a>
+
+                                        </p>
+
+
+                                        <div class="product_prop">
+                                            <p class="product_price">
+                                                <span class="money"> GHC 140.00</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="product_links">
+                                            <a class="btn_options" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+            }
+
+                            
+
+                        </div>
+                    </div>
+
+                </div>
+    
+                <!-- END content_for_index -->
