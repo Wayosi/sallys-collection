@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using sallys_collection.Models;
+using sallys_collection.Repositories.Interfaces;
 using System.Diagnostics;
 
 namespace sallys_collection.Controllers
@@ -7,14 +8,17 @@ namespace sallys_collection.Controllers
     public class CollectionController : Controller
     {
         private readonly ILogger<CollectionController> _logger;
+        private readonly IProductRepository _productRepository;
 
-        public CollectionController(ILogger<CollectionController> logger)
+        public CollectionController(ILogger<CollectionController> logger, IProductRepository productRepository)
         {
             _logger = logger;
+            _productRepository = productRepository;
         }
 
         public IActionResult Homepage()
         {
+            var dd = _productRepository.GetAllProducts().Result;
             return View();
         }
 

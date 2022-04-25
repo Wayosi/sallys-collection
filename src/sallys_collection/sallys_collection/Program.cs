@@ -1,7 +1,14 @@
+using sallys_collection.Models.Data;
+using sallys_collection.Repositories;
+using sallys_collection.Repositories.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<CollectionDataContext>();
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 
